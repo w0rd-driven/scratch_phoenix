@@ -13,8 +13,10 @@ use Mix.Config
 # which you typically run after static files are built.
 config :scratch_phoenix, ScratchPhoenix.Endpoint,
   http: [port: {:system, "PORT"}],
-  url: [host: "example.com", port: 80],
-  cache_static_manifest: "priv/static/manifest.json"
+  url: [scheme: "https", host: "scratch-phoenix.herokuapp.com", port: 443],
+  force_ssl: [rewrite_on: [:x_forwarded_proto]],
+  cache_static_manifest: "priv/static/manifest.json",
+  secret_key_base: System.get_env("SECRET_KEY_BASE")
 
 # Do not print debug messages in production
 config :logger, level: :info
@@ -64,11 +66,9 @@ config :logger, level: :info
 # which should be versioned separately.
 #import_config "prod.secret.exs"
 
-config :scratch_phoenix, ScratchPhoenix.Endpoint,
-  secret_key_base: System.get_env("SECRET_KEY_BASE")
-
 # Configure your database
 config :scratch_phoenix, ScratchPhoenix.Repo,
   adapter: Ecto.Adapters.Postgres,
   url: System.get_env("DATABASE_URL"),
-  size: 20 # The amount of database connections in the pool
+  size: 20, # The amount of database connections in the pool
+  ssl: true
