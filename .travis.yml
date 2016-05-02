@@ -1,0 +1,12 @@
+language: elixir
+elixir:
+  - 1.2.3
+otp_release:
+  - 18.2.1
+deploy:
+  provider: heroku
+  api_key:
+    secure: vqZhxbpwpkCKvrSgh+S8B2qDrdCw+ITskXwzhRJjBqTO40oa1sGSXFMT7XNali124824/zm16YXrd/d1K/4iPaXRthfsxyrblUijRMF0AONJfkT/d77I8SZSPqa8+FRD2Ah7juaeFsNYKzkeYX+uZ7kb9RT1GEbsL1A1sdYIlzyz8eJBEBW0fhO2sT6Co2LueXeduWJPNTxvYT6JSIPN3ijNlcA643wLFbFqjs8qAkbBBf+B6TIv/84x6SLvZuuNrwgEfkrNaP0jNnjj9CqjWE2cTYeXyZwvfW6k1agFw+2gfz9AVzuAggOFsoHLb01tNkKR+oCNEYkv910X1f2lHoic2MX5/hp7+jtRypbL5qUAkvchltdIL+C4kD4NXiiTRUmXswfttB2IJVOaVnjWfv38o67UYjnAJ/+u7pvDQQIf7DqZEtDiOJzsC/Lm51wvmZgCfpNSpIdmTV2/BTYcKZQOcI47jBLkt/pj1v5YnDZB2W3UQei2Uj4/vwl8rqT65cFgWN4YHC3s2yudY8sQPv0LdPHs+vwsRRT89I1JBPHoVvW9P7IQ0GTT5jvwefTctN9uMUEpgo7qaMR8qItQUJZujQ+J+GntBtZpm+XPQmEGFTeqZ42iL3JJ/3iujj+BwSPkg3dlt3XWtb3ULNyiebL4mXkvKKMcIf2R8u1/8pY=
+  app: scratch-phoenix
+  on:
+    repo: w0rd-driven/scratch_phoenix
